@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="urn:Cocote.Feeds.Model.SimpleTypes.State"
+           xmlns="urn:Cocote.Feeds.Model.SimpleTypes.State"
+           elementFormDefault="qualified"
+>
+    <xs:simpleType name="state">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="new"/>
+            <xs:enumeration value="refurbished"/>
+            <xs:enumeration value="second_hand"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

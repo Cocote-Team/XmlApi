@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="urn:Cocote.Feeds.Model.SimpleTypes.Payment"
+           xmlns="urn:Cocote.Feeds.Model.SimpleTypes.Payment"
+           elementFormDefault="qualified"
+>
+    <xs:simpleType name="payment">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="bitcoin"/>
+            <xs:enumeration value="paypal"/>
+            <xs:enumeration value="consumer-credit"/>
+            <xs:enumeration value="credit"/>
+            <xs:enumeration value="cheque"/>
+            <xs:enumeration value="bank-transfer"/>
+            <xs:enumeration value="gift-card-voucher"/>
+            <xs:enumeration value="direct-debit"/>
+            <xs:enumeration value="debit-card"/>
+            <xs:enumeration value="cash"/>
+            <xs:enumeration value="ethereum"/>
+            <xs:enumeration value="ripple"/>
+            <xs:enumeration value="litecoin"/>
+            <xs:enumeration value="amazon-pay"/>
+            <xs:enumeration value="electroneum"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

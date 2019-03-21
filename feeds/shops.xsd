@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="urn:Cocote.Feeds.Shops"
+           xmlns="urn:Cocote.Feeds.Shops"
+           elementFormDefault="qualified"
+>
+    <xs:include schemaLocation="model/simpleTypes/category.xsd"/>
+    <xs:include schemaLocation="model/simpleTypes/country.xsd"/>
+    <xs:include schemaLocation="model/simpleTypes/label.xsd"/>
+    <xs:include schemaLocation="model/simpleTypes/payment.xsd"/>
+    <xs:include schemaLocation="model/simpleTypes/state.xsd"/>
+    <xs:include schemaLocation="model/simpleTypes/type.xsd"/>
+    <xs:include schemaLocation="model/simpleTypes/shipping-delay.xsd"/>
+
+    <xs:include schemaLocation="model/complexTypes/location.xsd"/>
+    <xs:include schemaLocation="model/complexTypes/opening-days-hours.xsd"/>
+    <xs:include schemaLocation="model/complexTypes/sale-point.xsd"/>
+    <xs:include schemaLocation="model/complexTypes/shipping.xsd"/>
+    <xs:include schemaLocation="model/complexTypes/time-slot.xsd"/>
+    <xs:include schemaLocation="model/complexTypes/time-slots-day.xsd"/>
+
+    <xs:element name="shops">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="shop" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="id" type="xs:string" nillable="false">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:minLength value="1"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="updated" type="xs:dateTime"/>
+                            <xs:element name="shop_details">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="name" type="xs:string">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en">
+                                                    The name of the shop.
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+
+                                        <xs:element name="description" type="xs:string">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en">
+                                                    A short description of the shop.
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+
+                                        <xs:element name="business_number" type="xs:string">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en">
+                                                    The business number of the company (aka "SIRET" in french).
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+
+                                        <xs:element name="logo_url" type="xs:string">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en">
+                                                    URL to the logo of the shop.
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+
+                                        <xs:element name="online_sales" type="xs:boolean">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en">
+                                                    Set to true if shop makes online sales.
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+
+                                        <xs:element name="physical_sales" type="xs:boolean">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en">
+                                                    Set to false if shop makes physical sales.
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+
+                                        <xs:element name="shop_url" type="xs:string">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en">
+                                                    URL to shop's website (or to page of company representing the
+                                                    shop website which lists the products of the shop).
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+
+                                        <xs:element name="xml_url" type="xs:string">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en">
+                                                    URL of the XML feed which describes products of the shop.
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+
+                            <xs:element name="online_sale_details">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="warehouse_locations">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="warehouse_location" type="location"
+                                                                maxOccurs="unbounded"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="online_payments">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="payment" type="payment" maxOccurs="unbounded"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="shipping_choices">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="shipping_choice" type="shipping"
+                                                                maxOccurs="unbounded"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+
+                            <xs:element name="sale_points">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="sale_point" type="sale_point" maxOccurs="unbounded"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+
+                            <xs:element name="global_products_data">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="category" type="category">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en">
+                                                    The default category to use. This category will be used
+                                                    to complete offers provided without a category.
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="labels">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="label" type="label" maxOccurs="unbounded">
+                                                        <xs:annotation>
+                                                            <xs:documentation xml:lang="en">
+                                                                The default labels to use. Those labels will be used
+                                                                to complete offers provided without any label.
+                                                            </xs:documentation>
+                                                        </xs:annotation>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="online_sales" type="xs:boolean">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en">
+                                                    The default labels to use. Those labels will be used
+                                                    to complete offers provided without any label.
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="physical_sales" type="xs:boolean"/>
+                                        <xs:element name="state" type="state"/>
+                                        <xs:element name="brand" type="xs:string"/>
+                                        <xs:element name="types">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="type" type="type" maxOccurs="unbounded"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="distance" type="xs:integer"/>
+                                        <xs:element name="keywords" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="generated" type="xs:dateTime" use="required"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

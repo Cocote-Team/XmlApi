@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="urn:Cocote.Feeds.Model.ComplexTypes.Shipping"
+           xmlns="urn:Cocote.Feeds.Model.ComplexTypes.Shipping"
+           elementFormDefault="qualified"
+>
+    <xs:include schemaLocation="../simpleTypes/country.xsd"/>
+    <xs:include schemaLocation="../simpleTypes/shipping-delay.xsd"/>
+
+    <xs:complexType name="shipping">
+        <xs:sequence>
+            <xs:element name="type" type="xs:string"/>
+            <xs:element name="countries">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="country" type="country" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="delay" type="shippingDelay"/>
+            <xs:element name="cost" type="xs:float"/>
+            <xs:element name="franco" type="xs:float"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="urn:Cocote.Feeds.Model.ComplexTypes.TimeSlotsDay"
+           xmlns="urn:Cocote.Feeds.Model.ComplexTypes.TimeSlotsDay"
+           elementFormDefault="qualified"
+>
+    <xs:include schemaLocation="time-slot.xsd"/>
+
+    <xs:complexType name="timeSlotsDay">
+        <xs:sequence>
+            <xs:element name="timeSlot" type="timeSlot" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

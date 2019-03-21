@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="urn:Cocote.Feeds.Model.SimpleTypes.Category"
+           xmlns="urn:Cocote.Feeds.Model.SimpleTypes.Category"
+           elementFormDefault="qualified"
+>
+    <xs:simpleType name="category">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="adult"/>
+            <xs:enumeration value="art-antique-collections"/>
+            <xs:enumeration value="beauty"/>
+            <xs:enumeration value="childcare"/>
+            <xs:enumeration value="diy"/>
+            <xs:enumeration value="electrical-appliance"/>
+            <xs:enumeration value="food"/>
+            <xs:enumeration value="gardening"/>
+            <xs:enumeration value="health"/>
+            <xs:enumeration value="hobbies"/>
+            <xs:enumeration value="house"/>
+            <xs:enumeration value="look"/>
+            <xs:enumeration value="meal"/>
+            <xs:enumeration value="multimedia-high-tech"/>
+            <xs:enumeration value="pets"/>
+            <xs:enumeration value="professional-equipment"/>
+            <xs:enumeration value="sport"/>
+            <xs:enumeration value="vehicles"/>
+            <xs:enumeration value="wedding"/>
+            <xs:enumeration value="well-being"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

@@ -1,0 +1,23 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="urn:Cocote.Feeds.Model.SimpleTypes.Type"
+           xmlns="urn:Cocote.Feeds.Model.SimpleTypes.Type"
+           elementFormDefault="qualified"
+>
+    <xs:simpleType name="type">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="none">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        If this value is provided, other values will be ignored.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="box"/>
+            <xs:enumeration value="gift"/>
+            <xs:enumeration value="card"/>
+            <xs:enumeration value="pack"/>
+            <xs:enumeration value="kit"/>
+            <xs:enumeration value="bundle"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

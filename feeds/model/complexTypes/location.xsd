@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="urn:Cocote.Feeds.Model.ComplexTypes.Location"
+           xmlns="urn:Cocote.Feeds.Model.ComplexTypes.Location"
+           elementFormDefault="qualified"
+>
+    <xs:include schemaLocation="../simpleTypes/country.xsd"/>
+
+    <xs:complexType name="location">
+        <xs:sequence>
+            <xs:element name="address" type="xs:string"/>
+            <xs:element name="city" type="xs:string"/>
+            <xs:element name="postcode" type="xs:int"/>
+            <xs:element name="country" type="xs:string"/>
+            <xs:element name="latitude" type="xs:float"/>
+            <xs:element name="longitude" type="xs:float"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

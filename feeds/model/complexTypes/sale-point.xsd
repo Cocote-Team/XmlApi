@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="urn:Cocote.Feeds.Model.ComplexTypes.SalePoint"
+           xmlns="urn:Cocote.Feeds.Model.ComplexTypes.SalePoint"
+           elementFormDefault="qualified"
+>
+    <xs:include schemaLocation="../simpleTypes/payment.xsd"/>
+    <xs:include schemaLocation="location.xsd"/>
+    <xs:include schemaLocation="opening-days-hours.xsd"/>
+
+    <xs:complexType name="sale_point">
+        <xs:sequence>
+            <xs:element name="sale_point_location" type="location"/>
+            <xs:element name="sale_point_contact">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="phone" type="xs:string"/>
+                        <xs:element name="email" type="xs:string"/>
+                        <xs:element name="url_website" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="sale_point_payments" minOccurs="1">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="payment" type="payment" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="sale_point_openings" type="opening_days_hours"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
