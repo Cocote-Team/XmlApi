@@ -12,10 +12,10 @@
             <gtin>AZERTY-123456789</gtin>
             <mpn>AZERTY-123456789</mpn>
             <brand>Marque</brand>
-            <category>alimentation</category>
+            <category>food</category>
             <labels>
-                <label>mif</label>
-                <label>0-waste</label>
+                <label>made-in-france</label>
+                <label>zero-waste</label>
             </labels>
             <types>
                 <type>gift</type>
