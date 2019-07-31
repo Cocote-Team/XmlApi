@@ -16,5 +16,12 @@
             <xs:element name="latitude" type="xs:float"/>
             <xs:element name="longitude" type="xs:float"/>
         </xs:sequence>
+        <xs:attribute name="id" type="xs:string">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    ID of the location
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
     </xs:complexType>
 </xs:schema>

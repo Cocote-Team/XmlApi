@@ -21,5 +21,12 @@
             <xs:element name="cost" type="xs:float"/>
             <xs:element name="franco" type="xs:float"/>
         </xs:sequence>
+        <xs:attribute name="id" type="xs:string">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    ID of the shipping choice
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
     </xs:complexType>
 </xs:schema>

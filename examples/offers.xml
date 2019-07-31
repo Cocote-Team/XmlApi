@@ -4,184 +4,195 @@
         xmlns="../feeds/offers.xsd"
         generated="2019-03-21T09:00:00"
 >
-    <offer id="123" updated="2019-03-20T09:00:00">
-        <offerDetails>
-            <title>Titre du produit</title>
-            <description>Description du produit</description>
-            <keywords>mot clé 1, mot clé 2, ...</keywords>
-            <gtin>AZERTY-123456789</gtin>
-            <mpn>AZERTY-123456789</mpn>
-            <brand>Marque</brand>
-            <category>food</category>
-            <labels>
-                <label>made-in-france</label>
-                <label>zero-waste</label>
-            </labels>
-            <types>
-                <type>gift</type>
-            </types>
-            <state>new</state>
-            <distance>50.0</distance>
-            <price>60.00</price>
-            <exVatPrice>50.00</exVatPrice>
-            <vat>20</vat>
-            <images>
-                <image>https://domain.ext/path/to/image1</image>
-                <image>http://domain.ext/path/to/image2</image>
-            </images>
-            <saleTypes>
-                <saleType>online</saleType>
-                <saleType>physical</saleType>
-                <saleType>marketplace</saleType>
-            </saleTypes>
-            <variations>
-                <variation id="1">
-                    <variationTitle>Titre de la variation</variationTitle>
-                    <variationDescription>Description de la variation</variationDescription>
-                    <variationImages>
-                        <variationImage>http://domain.ext/path/to/image1</variationImage>
-                        <variationImage>http://domain.ext/path/to/image2</variationImage>
-                    </variationImages>
-                    <variationPrice>65.00</variationPrice>
-                    <variationExVatPrice>54.17</variationExVatPrice>
-                    <variationMarketplaceDetails>
-                        <variationStock>456</variationStock>
-                        <variationStockThreshold>20</variationStockThreshold>
-                    </variationMarketplaceDetails>
-                </variation>
-            </variations>
-        </offerDetails>
-        <onlineSalesDetails>
-            <link>http://domain.ext/path/to/product</link>
-            <onlinePayments>
-                <payment>cb</payment>
-                <payment>paypal</payment>
-            </onlinePayments>
-            <warehouses>
-                <warehouse>
-                    <latitude>45.0540</latitude>
-                    <longitude>2.45478</longitude>
-                    <address1>123, rue du Test</address1>
-                    <address2/>
-                    <city>Test</city>
-                    <postcode>12345</postcode>
-                    <countryCode>FR</countryCode>
-                </warehouse>
-                <warehouse>
-                    <latitude>45.0540</latitude>
-                    <longitude>2.45478</longitude>
-                    <address1>123, rue du Test</address1>
-                    <address2/>
-                    <city>Test</city>
-                    <postcode>12345</postcode>
-                    <countryCode>FR</countryCode>
-                </warehouse>
-            </warehouses>
-            <shippingChoices>
-                <shippingChoice id="456"/>
-                <shippingChoice>
-                    <type>Colissimo</type>
-                    <countries>
-                        <country>FR</country>
-                        <country>GB</country>
-                        <country>DE</country>
-                    </countries>
-                    <delay>-3d</delay>
-                    <cost>4.99</cost>
-                    <franco>50.0</franco>
-                </shippingChoice>
-            </shippingChoices>
-        </onlineSalesDetails>
-        <physicalSalesDetails>
-            <salePoints>
-                <salePoint>
-                    <salePointLocation>
-                        <address1>367, rue de Saint Denis</address1>
-                        <address2/>
-                        <city>Saint Cyr en Val</city>
-                        <postcode>45590</postcode>
-                        <countryCode>FR</countryCode>
-                        <latitude>47.859609</latitude>
-                        <longitude>1.955177</longitude>
-                    </salePointLocation>
-                    <salePointContact>
-                        <phone>0123456789</phone>
-                        <email>someone@domain.ext</email>
-                        <urlWebsite>https://path-to-website.ext</urlWebsite>
-                    </salePointContact>
-                    <salePointPayments>
-                        <payment>cash</payment>
-                    </salePointPayments>
-                    <salePointOpenings>
-                        <monday>
-                            <timeSlot>
-                                <start>08:00</start>
-                                <end>12:30</end>
-                            </timeSlot>
-                            <timeSlot>
-                                <start>14:00</start>
-                                <end>18:30</end>
-                            </timeSlot>
-                        </monday>
-                        <tuesday>
-                            <timeSlot>
-                                <start>08:00</start>
-                                <end>12:30</end>
-                            </timeSlot>
-                            <timeSlot>
-                                <start>14:00</start>
-                                <end>18:30</end>
-                            </timeSlot>
-                        </tuesday>
-                        <wednesday>
-                            <timeSlot>
-                                <start>08:00</start>
-                                <end>12:30</end>
-                            </timeSlot>
-                            <timeSlot>
-                                <start>14:00</start>
-                                <end>18:30</end>
-                            </timeSlot>
-                        </wednesday>
-                        <thursday>
-                            <timeSlot>
-                                <start>08:00</start>
-                                <end>12:30</end>
-                            </timeSlot>
-                            <timeSlot>
-                                <start>14:00</start>
-                                <end>18:30</end>
-                            </timeSlot>
-                        </thursday>
-                        <friday>
-                            <timeSlot>
-                                <start>08:00</start>
-                                <end>12:30</end>
-                            </timeSlot>
-                            <timeSlot>
-                                <start>14:00</start>
-                                <end>18:30</end>
-                            </timeSlot>
-                        </friday>
-                        <saturday>
-                            <timeSlot>
-                                <start>08:00</start>
-                                <end>12:30</end>
-                            </timeSlot>
-                            <timeSlot>
-                                <start>14:00</start>
-                                <end>19:03</end>
-                            </timeSlot>
-                        </saturday>
-                        <sunday/>
-                        <additionalInfo>Fermeture les jours fériés.</additionalInfo>
-                    </salePointOpenings>
-                </salePoint>
-            </salePoints>
-        </physicalSalesDetails>
-        <marketplaceDetails>
-            <stock>456</stock>
-            <stockThreshold>10</stockThreshold>
-        </marketplaceDetails>
-    </offer>
+    <warehouses>
+        <warehouse id="1">
+            <latitude>45.0540</latitude>
+            <longitude>2.45478</longitude>
+            <address1>123, rue du Test</address1>
+            <address2/>
+            <city>Test</city>
+            <postcode>12345</postcode>
+            <countryCode>FR</countryCode>
+        </warehouse>
+        <warehouse id="2">
+            <latitude>45.0540</latitude>
+            <longitude>2.45478</longitude>
+            <address1>123, rue du Test</address1>
+            <address2/>
+            <city>Test</city>
+            <postcode>12345</postcode>
+            <countryCode>FR</countryCode>
+        </warehouse>
+    </warehouses>
+    <shippingChoices>
+        <shippingChoice id="1">
+            <type>Colissimo</type>
+            <countries>
+                <country>FR</country>
+                <country>GB</country>
+                <country>DE</country>
+            </countries>
+            <delay>-3d</delay>
+            <cost>4.99</cost>
+            <franco>50.0</franco>
+        </shippingChoice>
+    </shippingChoices>
+    <salePoints>
+        <salePoint id="1">
+            <salePointLocation>
+                <address1>367, rue de Saint Denis</address1>
+                <address2/>
+                <city>Saint Cyr en Val</city>
+                <postcode>45590</postcode>
+                <countryCode>FR</countryCode>
+                <latitude>47.859609</latitude>
+                <longitude>1.955177</longitude>
+            </salePointLocation>
+            <salePointContact>
+                <phone>0123456789</phone>
+                <email>someone@domain.ext</email>
+                <urlWebsite>https://path-to-website.ext</urlWebsite>
+            </salePointContact>
+            <salePointPayments>
+                <payment>cash</payment>
+            </salePointPayments>
+            <salePointOpenings>
+                <monday>
+                    <timeSlot>
+                        <start>08:00</start>
+                        <end>12:30</end>
+                    </timeSlot>
+                    <timeSlot>
+                        <start>14:00</start>
+                        <end>18:30</end>
+                    </timeSlot>
+                </monday>
+                <tuesday>
+                    <timeSlot>
+                        <start>08:00</start>
+                        <end>12:30</end>
+                    </timeSlot>
+                    <timeSlot>
+                        <start>14:00</start>
+                        <end>18:30</end>
+                    </timeSlot>
+                </tuesday>
+                <wednesday>
+                    <timeSlot>
+                        <start>08:00</start>
+                        <end>12:30</end>
+                    </timeSlot>
+                    <timeSlot>
+                        <start>14:00</start>
+                        <end>18:30</end>
+                    </timeSlot>
+                </wednesday>
+                <thursday>
+                    <timeSlot>
+                        <start>08:00</start>
+                        <end>12:30</end>
+                    </timeSlot>
+                    <timeSlot>
+                        <start>14:00</start>
+                        <end>18:30</end>
+                    </timeSlot>
+                </thursday>
+                <friday>
+                    <timeSlot>
+                        <start>08:00</start>
+                        <end>12:30</end>
+                    </timeSlot>
+                    <timeSlot>
+                        <start>14:00</start>
+                        <end>18:30</end>
+                    </timeSlot>
+                </friday>
+                <saturday>
+                    <timeSlot>
+                        <start>08:00</start>
+                        <end>12:30</end>
+                    </timeSlot>
+                    <timeSlot>
+                        <start>14:00</start>
+                        <end>19:03</end>
+                    </timeSlot>
+                </saturday>
+                <sunday/>
+                <additionalInfo>Fermeture les jours fériés.</additionalInfo>
+            </salePointOpenings>
+        </salePoint>
+    </salePoints>
+    <items>
+        <offer id="123" updated="2019-03-20T09:00:00">
+            <offerDetails>
+                <title>Titre du produit</title>
+                <description>Description du produit</description>
+                <keywords>mot clé 1, mot clé 2, ...</keywords>
+                <gtin>AZERTY-123456789</gtin>
+                <mpn>AZERTY-123456789</mpn>
+                <brand>Marque</brand>
+                <category>food</category>
+                <labels>
+                    <label>made-in-france</label>
+                    <label>zero-waste</label>
+                </labels>
+                <types>
+                    <type>gift</type>
+                </types>
+                <state>new</state>
+                <distance>50.0</distance>
+                <price>60.00</price>
+                <exVatPrice>50.00</exVatPrice>
+                <vat>20</vat>
+                <images>
+                    <image>https://domain.ext/path/to/image1</image>
+                    <image>http://domain.ext/path/to/image2</image>
+                </images>
+                <saleTypes>
+                    <saleType>online</saleType>
+                    <saleType>physical</saleType>
+                    <saleType>marketplace</saleType>
+                </saleTypes>
+                <variations>
+                    <variation id="1">
+                        <variationTitle>Titre de la variation</variationTitle>
+                        <variationDescription>Description de la variation</variationDescription>
+                        <variationImages>
+                            <variationImage>http://domain.ext/path/to/image1</variationImage>
+                            <variationImage>http://domain.ext/path/to/image2</variationImage>
+                        </variationImages>
+                        <variationPrice>65.00</variationPrice>
+                        <variationExVatPrice>54.17</variationExVatPrice>
+                        <variationMarketplaceDetails>
+                            <variationStock>456</variationStock>
+                            <variationStockThreshold>20</variationStockThreshold>
+                        </variationMarketplaceDetails>
+                    </variation>
+                </variations>
+            </offerDetails>
+            <onlineSalesDetails>
+                <link>http://domain.ext/path/to/product</link>
+                <onlinePayments>
+                    <payment>debit-card</payment>
+                    <payment>paypal</payment>
+                </onlinePayments>
+                <warehouses>
+                    <warehouse ref="1"/>
+                    <warehouse ref="2"/>
+                </warehouses>
+                <shippingChoices>
+                    <shippingChoice ref="1"/>
+                </shippingChoices>
+            </onlineSalesDetails>
+            <physicalSalesDetails>
+                <salePoints>
+                    <salePoint ref="1"/>
+                </salePoints>
+            </physicalSalesDetails>
+            <marketplaceDetails>
+                <stock>456</stock>
+                <stockThreshold>10</stockThreshold>
+            </marketplaceDetails>
+        </offer>
+    </items>
 </offers>

@@ -29,5 +29,12 @@
             </xs:element>
             <xs:element name="salePointOpenings" type="openingDaysHours"/>
         </xs:sequence>
+        <xs:attribute name="id" type="xs:string">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    ID of the sale point
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
     </xs:complexType>
 </xs:schema>

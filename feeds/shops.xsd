@@ -237,7 +237,7 @@
                         <xs:attribute name="id" type="xs:string">
                             <xs:annotation>
                                 <xs:documentation xml:lang="en">
-                                    ID of the offer
+                                    ID of the shop
                                 </xs:documentation>
                             </xs:annotation>
                         </xs:attribute>
@@ -245,14 +245,20 @@
                         <xs:attribute name="updated" type="xs:dateTime">
                             <xs:annotation>
                                 <xs:documentation xml:lang="en">
-                                   Modification date of the offer
+                                   Modification date of the shop
                                 </xs:documentation>
                             </xs:annotation>
                         </xs:attribute>
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>
-            <xs:attribute name="generated" type="xs:dateTime" use="required"/>
+            <xs:attribute name="generated" type="xs:dateTime" use="required">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        Generation date of the feed
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
         </xs:complexType>
     </xs:element>
 </xs:schema>
