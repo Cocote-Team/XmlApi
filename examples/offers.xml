@@ -140,6 +140,7 @@
                 <types>
                     <type>gift</type>
                 </types>
+                <producer>true</producer>
                 <state>new</state>
                 <distance>50.0</distance>
                 <price>60.00</price>

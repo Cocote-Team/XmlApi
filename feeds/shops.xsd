@@ -5,6 +5,7 @@
            elementFormDefault="qualified"
 >
     <xs:include schemaLocation="model/simpleTypes/category.xsd"/>
+    <xs:include schemaLocation="model/simpleTypes/boolean.xsd"/>
     <xs:include schemaLocation="model/simpleTypes/country.xsd"/>
     <xs:include schemaLocation="model/simpleTypes/label.xsd"/>
     <xs:include schemaLocation="model/simpleTypes/payment.xsd"/>
@@ -187,6 +188,14 @@
                                             <xs:annotation>
                                                 <xs:documentation xml:lang="en">
                                                     The default brand for offers.
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+
+                                        <xs:element name="producer" type="boolean">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en">
+                                                    Has the offers been produced by shop?
                                                 </xs:documentation>
                                             </xs:annotation>
                                         </xs:element>

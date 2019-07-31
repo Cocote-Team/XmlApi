@@ -4,6 +4,7 @@
            xmlns="urn:Cocote.Feeds.Offers"
            elementFormDefault="qualified"
 >
+    <xs:include schemaLocation="model/simpleTypes/boolean.xsd"/>
     <xs:include schemaLocation="model/simpleTypes/category.xsd"/>
     <xs:include schemaLocation="model/simpleTypes/country.xsd"/>
     <xs:include schemaLocation="model/simpleTypes/label.xsd"/>
@@ -170,6 +171,15 @@
                                                             </xs:sequence>
                                                         </xs:complexType>
                                                     </xs:element>
+
+                                                    <xs:element name="producer" type="boolean">
+                                                        <xs:annotation>
+                                                            <xs:documentation xml:lang="en">
+                                                                Has the offer been produced by shop?
+                                                            </xs:documentation>
+                                                        </xs:annotation>
+                                                    </xs:element>
+
                                                     <xs:element name="distance" type="xs:integer">
                                                         <xs:annotation>
                                                             <xs:documentation xml:lang="en">

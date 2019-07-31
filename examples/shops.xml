@@ -153,6 +153,7 @@
             <types>
                 <type>gift</type>
             </types>
+            <producer>false</producer>
             <distance/>
             <keywords/>
         </globalProductsData>
