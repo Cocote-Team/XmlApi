@@ -22,10 +22,7 @@
     <xs:include schemaLocation="model/complexTypes/time-slots-day.xsd"/>
 
     <xs:element name="shops">
-
-
         <xs:complexType>
-
             <xs:sequence>
                 <xs:element name="shop" maxOccurs="unbounded">
                     <xs:complexType>
@@ -104,6 +101,7 @@
                                                 </xs:sequence>
                                             </xs:complexType>
                                         </xs:element>
+
                                         <xs:element name="onlinePayments">
                                             <xs:complexType>
                                                 <xs:sequence>
@@ -111,6 +109,7 @@
                                                 </xs:sequence>
                                             </xs:complexType>
                                         </xs:element>
+
                                         <xs:element name="shippingChoices">
                                             <xs:complexType>
                                                 <xs:sequence>
