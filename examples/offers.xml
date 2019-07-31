@@ -155,7 +155,7 @@
                     <saleType>marketplace</saleType>
                 </saleTypes>
                 <variations>
-                    <variation id="1">
+                    <variation id="1234">
                         <variationTitle>Titre de la variation</variationTitle>
                         <variationDescription>Description de la variation</variationDescription>
                         <variationImages>
