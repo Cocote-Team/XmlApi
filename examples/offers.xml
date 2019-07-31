@@ -35,6 +35,7 @@
             </countries>
             <delay>-3d</delay>
             <cost>4.99</cost>
+            <currency>EUR</currency>
             <franco>50.0</franco>
         </shippingChoice>
     </shippingChoices>
@@ -146,6 +147,7 @@
                 <price>60.00</price>
                 <exVatPrice>50.00</exVatPrice>
                 <vat>20</vat>
+                <currency>EUR</currency>
                 <images>
                     <image>https://domain.ext/path/to/image1</image>
                     <image>http://domain.ext/path/to/image2</image>

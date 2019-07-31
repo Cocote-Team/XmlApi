@@ -5,6 +5,7 @@
            elementFormDefault="qualified"
 >
     <xs:include schemaLocation="../simpleTypes/country.xsd"/>
+    <xs:include schemaLocation="../simpleTypes/currency.xsd"/>
     <xs:include schemaLocation="../simpleTypes/shipping-delay.xsd"/>
 
     <xs:complexType name="shipping">
@@ -19,6 +20,7 @@
             </xs:element>
             <xs:element name="delay" type="shippingDelay"/>
             <xs:element name="cost" type="xs:float"/>
+            <xs:element name="currency" type="currency"/>
             <xs:element name="franco" type="xs:float"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:string">

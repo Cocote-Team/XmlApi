@@ -48,6 +48,7 @@
                     </countries>
                     <delay>-3d</delay>
                     <cost>4.99</cost>
+                    <currency>EUR</currency>
                     <franco>50.0</franco>
                 </shippingChoice>
             </shippingChoices>
