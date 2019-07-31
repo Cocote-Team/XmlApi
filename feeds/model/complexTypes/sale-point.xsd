@@ -8,26 +8,26 @@
     <xs:include schemaLocation="location.xsd"/>
     <xs:include schemaLocation="opening-days-hours.xsd"/>
 
-    <xs:complexType name="sale_point">
+    <xs:complexType name="salePoint">
         <xs:sequence>
-            <xs:element name="sale_point_location" type="location"/>
-            <xs:element name="sale_point_contact">
+            <xs:element name="salePointLocation" type="location"/>
+            <xs:element name="salePointContact">
                 <xs:complexType>
                     <xs:sequence>
                         <xs:element name="phone" type="xs:string"/>
                         <xs:element name="email" type="xs:string"/>
-                        <xs:element name="url_website" type="xs:string"/>
+                        <xs:element name="urlWebsite" type="xs:string"/>
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
-            <xs:element name="sale_point_payments" minOccurs="1">
+            <xs:element name="salePointPayments" minOccurs="1">
                 <xs:complexType>
                     <xs:sequence>
                         <xs:element name="payment" type="payment" maxOccurs="unbounded"/>
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
-            <xs:element name="sale_point_openings" type="opening_days_hours"/>
+            <xs:element name="salePointOpenings" type="openingDaysHours"/>
         </xs:sequence>
     </xs:complexType>
 </xs:schema>

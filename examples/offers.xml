@@ -1,43 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<shops xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="../feeds/shops.xsd"
-       xmlns="../feeds/shops.xsd"
-       generated="2019-03-21T09:00:00"
+<offers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="../feeds/offers.xsd"
+        xmlns="../feeds/offers.xsd"
+        generated="2019-03-21T09:00:00"
 >
-    <shop id="123" updated="1552986464">
-        <shopDetails>
-            <name>La ferme bio</name>
-            <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sagittis et justo sed tincidunt.
-                Mauris et dolor orci. Aliquam bibendum, ipsum sit amet dapibus rhoncus, sem ex tempus risus, eu mattis
-                magna arcu ut odio. Praesent lacinia urna at diam mattis dapibus. Nunc scelerisque tortor tellus, a
-                ullamcorper ex faucibus in.
-            </description>
-            <businessNumber>123456</businessNumber>
-            <logoUrl>https://website.ext/path-to-logo.png</logoUrl>
+    <offer id="123" updated="1552986464">
+        <offerDetails>
+            <title>Titre du produit</title>
+            <description>Description du produit</description>
+            <keywords>mot clé 1, mot clé 2, ...</keywords>
+            <gtin>AZERTY-123456789</gtin>
+            <mpn>AZERTY-123456789</mpn>
+            <brand>Marque</brand>
+            <category>alimentation</category>
+            <labels>
+                <label>mif</label>
+                <label>0-waste</label>
+            </labels>
+            <types>
+                <type>gift</type>
+            </types>
+            <state>new</state>
+            <distance>50.0</distance>
+            <price>60.00</price>
+            <exVatPrice>50.00</exVatPrice>
+            <vat>20</vat>
+            <images>
+                <image>https://domain.ext/path/to/image1</image>
+                <image>http://domain.ext/path/to/image2</image>
+            </images>
             <saleTypes>
                 <saleType>online</saleType>
+                <saleType>physical</saleType>
+                <saleType>marketplace</saleType>
             </saleTypes>
-            <shopUrl>https://website.ext</shopUrl>
-            <feedUrl>https://website.ext/xml-feed-path</feedUrl>
-        </shopDetails>
+            <variations>
+                <variation id="1">
+                    <variationTitle>Titre de la variation</variationTitle>
+                    <variationDescription>Description de la variation</variationDescription>
+                    <variationImages>
+                        <variationImage>http://domain.ext/path/to/image1</variationImage>
+                        <variationImage>http://domain.ext/path/to/image2</variationImage>
+                    </variationImages>
+                    <variationPrice>65.00</variationPrice>
+                    <variationExVatPrice>54.17</variationExVatPrice>
+                    <variationMarketplaceDetails>
+                        <variationStock>456</variationStock>
+                        <variationStockThreshold>20</variationStockThreshold>
+                    </variationMarketplaceDetails>
+                </variation>
+            </variations>
+        </offerDetails>
         <onlineSalesDetails>
-            <warehouseLocations>
-                <warehouseLocation>
-                    <address1>367, rue de Saint Denis</address1>
-                    <address2/>
-                    <city>Saint Cyr en Val</city>
-                    <postcode>45590</postcode>
-                    <countryCode>FR</countryCode>
-                    <latitude>47.859609</latitude>
-                    <longitude>1.955177</longitude>
-                </warehouseLocation>
-            </warehouseLocations>
+            <link>http://domain.ext/path/to/product</link>
             <onlinePayments>
-                <payment>debit-card</payment>
-                <payment>bitcoin</payment>
+                <payment>cb</payment>
                 <payment>paypal</payment>
             </onlinePayments>
+            <warehouses>
+                <warehouse>
+                    <latitude>45.0540</latitude>
+                    <longitude>2.45478</longitude>
+                    <address1>123, rue du Test</address1>
+                    <address2/>
+                    <city>Test</city>
+                    <postcode>12345</postcode>
+                    <countryCode>FR</countryCode>
+                </warehouse>
+                <warehouse>
+                    <latitude>45.0540</latitude>
+                    <longitude>2.45478</longitude>
+                    <address1>123, rue du Test</address1>
+                    <address2/>
+                    <city>Test</city>
+                    <postcode>12345</postcode>
+                    <countryCode>FR</countryCode>
+                </warehouse>
+            </warehouses>
             <shippingChoices>
+                <shippingChoice id="456"/>
                 <shippingChoice>
                     <type>Colissimo</type>
                     <countries>
@@ -138,22 +179,9 @@
                 </salePoint>
             </salePoints>
         </physicalSalesDetails>
-        <globalProductsData>
-            <category>food</category>
-            <labels>
-                <label>made-in-france</label>
-                <label>ab</label>
-            </labels>
-            <saleTypes>
-                <saleType>online</saleType>
-            </saleTypes>
-            <state>new</state>
-            <brand/>
-            <types>
-                <type>gift</type>
-            </types>
-            <distance/>
-            <keywords/>
-        </globalProductsData>
-    </shop>
-</shops>
+        <marketplaceDetails>
+            <stock>456</stock>
+            <stockThreshold>10</stockThreshold>
+        </marketplaceDetails>
+    </offer>
+</offers>

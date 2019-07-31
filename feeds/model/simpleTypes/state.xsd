@@ -7,7 +7,7 @@
     <xs:simpleType name="state">
         <xs:restriction base="xs:string">
             <xs:enumeration value="new"/>
-            <xs:enumeration value="refurbished"/>
+            <xs:enumeration value="repackaged"/>
             <xs:enumeration value="second_hand"/>
         </xs:restriction>
     </xs:simpleType>

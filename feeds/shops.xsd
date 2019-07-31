@@ -11,6 +11,7 @@
     <xs:include schemaLocation="model/simpleTypes/state.xsd"/>
     <xs:include schemaLocation="model/simpleTypes/type.xsd"/>
     <xs:include schemaLocation="model/simpleTypes/shipping-delay.xsd"/>
+    <xs:include schemaLocation="model/simpleTypes/sale-type.xsd"/>
 
     <xs:include schemaLocation="model/complexTypes/location.xsd"/>
     <xs:include schemaLocation="model/complexTypes/opening-days-hours.xsd"/>
@@ -20,7 +21,10 @@
     <xs:include schemaLocation="model/complexTypes/time-slots-day.xsd"/>
 
     <xs:element name="shops">
+
+
         <xs:complexType>
+
             <xs:sequence>
                 <xs:element name="shop" maxOccurs="unbounded">
                     <xs:complexType>
@@ -33,7 +37,7 @@
                                 </xs:simpleType>
                             </xs:element>
                             <xs:element name="updated" type="xs:dateTime"/>
-                            <xs:element name="shop_details">
+                            <xs:element name="shopDetails">
                                 <xs:complexType>
                                     <xs:sequence>
                                         <xs:element name="name" type="xs:string">
@@ -52,7 +56,7 @@
                                             </xs:annotation>
                                         </xs:element>
 
-                                        <xs:element name="business_number" type="xs:string">
+                                        <xs:element name="businessNumber" type="xs:string">
                                             <xs:annotation>
                                                 <xs:documentation xml:lang="en">
                                                     The business number of the company (aka "SIRET" in french).
@@ -60,7 +64,7 @@
                                             </xs:annotation>
                                         </xs:element>
 
-                                        <xs:element name="logo_url" type="xs:string">
+                                        <xs:element name="logoUrl" type="xs:string">
                                             <xs:annotation>
                                                 <xs:documentation xml:lang="en">
                                                     URL to the logo of the shop.
@@ -68,23 +72,15 @@
                                             </xs:annotation>
                                         </xs:element>
 
-                                        <xs:element name="online_sales" type="xs:boolean">
-                                            <xs:annotation>
-                                                <xs:documentation xml:lang="en">
-                                                    Set to true if shop makes online sales.
-                                                </xs:documentation>
-                                            </xs:annotation>
+                                        <xs:element name="saleTypes">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="saleType" type="saleType" maxOccurs="unbounded"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
                                         </xs:element>
 
-                                        <xs:element name="physical_sales" type="xs:boolean">
-                                            <xs:annotation>
-                                                <xs:documentation xml:lang="en">
-                                                    Set to false if shop makes physical sales.
-                                                </xs:documentation>
-                                            </xs:annotation>
-                                        </xs:element>
-
-                                        <xs:element name="shop_url" type="xs:string">
+                                        <xs:element name="shopUrl" type="xs:string">
                                             <xs:annotation>
                                                 <xs:documentation xml:lang="en">
                                                     URL to shop's website (or to page of company representing the
@@ -93,7 +89,7 @@
                                             </xs:annotation>
                                         </xs:element>
 
-                                        <xs:element name="xml_url" type="xs:string">
+                                        <xs:element name="feedUrl" type="xs:string">
                                             <xs:annotation>
                                                 <xs:documentation xml:lang="en">
                                                     URL of the XML feed which describes products of the shop.
@@ -104,29 +100,41 @@
                                 </xs:complexType>
                             </xs:element>
 
-                            <xs:element name="online_sale_details">
+                            <xs:element name="onlineSalesDetails">
                                 <xs:complexType>
                                     <xs:sequence>
-                                        <xs:element name="warehouse_locations">
+                                        <xs:element name="warehouseLocations">
                                             <xs:complexType>
                                                 <xs:sequence>
-                                                    <xs:element name="warehouse_location" type="location"
+                                                    <xs:element name="warehouseLocation" type="location"
                                                                 maxOccurs="unbounded"/>
                                                 </xs:sequence>
                                             </xs:complexType>
                                         </xs:element>
-                                        <xs:element name="online_payments">
+                                        <xs:element name="onlinePayments">
                                             <xs:complexType>
                                                 <xs:sequence>
                                                     <xs:element name="payment" type="payment" maxOccurs="unbounded"/>
                                                 </xs:sequence>
                                             </xs:complexType>
                                         </xs:element>
-                                        <xs:element name="shipping_choices">
+                                        <xs:element name="shippingChoices">
                                             <xs:complexType>
                                                 <xs:sequence>
-                                                    <xs:element name="shipping_choice" type="shipping"
-                                                                maxOccurs="unbounded"/>
+                                                    <xs:element name="shippingChoice" type="shipping" maxOccurs="unbounded"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="physicalSalesDetails">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="salePoints">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="salePoint" type="salePoint" maxOccurs="unbounded"/>
                                                 </xs:sequence>
                                             </xs:complexType>
                                         </xs:element>
@@ -134,15 +142,7 @@
                                 </xs:complexType>
                             </xs:element>
 
-                            <xs:element name="sale_points">
-                                <xs:complexType>
-                                    <xs:sequence>
-                                        <xs:element name="sale_point" type="sale_point" maxOccurs="unbounded"/>
-                                    </xs:sequence>
-                                </xs:complexType>
-                            </xs:element>
-
-                            <xs:element name="global_products_data">
+                            <xs:element name="globalProductsData">
                                 <xs:complexType>
                                     <xs:sequence>
                                         <xs:element name="category" type="category">
@@ -167,15 +167,13 @@
                                                 </xs:sequence>
                                             </xs:complexType>
                                         </xs:element>
-                                        <xs:element name="online_sales" type="xs:boolean">
-                                            <xs:annotation>
-                                                <xs:documentation xml:lang="en">
-                                                    The default labels to use. Those labels will be used
-                                                    to complete offers provided without any label.
-                                                </xs:documentation>
-                                            </xs:annotation>
+                                        <xs:element name="saleTypes">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="saleType" type="saleType" maxOccurs="unbounded"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
                                         </xs:element>
-                                        <xs:element name="physical_sales" type="xs:boolean"/>
                                         <xs:element name="state" type="state"/>
                                         <xs:element name="brand" type="xs:string"/>
                                         <xs:element name="types">
@@ -191,6 +189,8 @@
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
+                        <xs:attribute name="id" type="xs:string"/>
+                        <xs:attribute name="updated" type="xs:integer"/>
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>

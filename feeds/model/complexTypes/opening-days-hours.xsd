@@ -6,7 +6,7 @@
 >
     <xs:include schemaLocation="time-slots-day.xsd"/>
 
-    <xs:complexType name="opening_days_hours">
+    <xs:complexType name="openingDaysHours">
         <xs:sequence>
             <xs:element name="monday" type="timeSlotsDay"/>
             <xs:element name="tuesday" type="timeSlotsDay"/>
@@ -15,7 +15,7 @@
             <xs:element name="friday" type="timeSlotsDay"/>
             <xs:element name="saturday" type="timeSlotsDay"/>
             <xs:element name="sunday" type="timeSlotsDay"/>
-            <xs:element name="additional_info" type="xs:string"/>
+            <xs:element name="additionalInfo" type="xs:string"/>
         </xs:sequence>
     </xs:complexType>
 </xs:schema>

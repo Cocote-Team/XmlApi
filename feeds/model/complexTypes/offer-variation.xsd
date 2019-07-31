@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="urn:Cocote.Feeds.Model.ComplexTypes.OfferVariation"
+           xmlns="urn:Cocote.Feeds.Model.ComplexTypes.OfferVariation"
+           elementFormDefault="qualified"
+>
+    <xs:complexType name="offerVariation">
+        <xs:sequence>
+            <xs:element name="variationTitle" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        Title of the offer variation.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+            <xs:element name="variationDescription" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        Description of the offer variation.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+            <xs:element name="variationImages">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="variationImage" type="xs:string" maxOccurs="unbounded">
+                            <xs:annotation>
+                                <xs:documentation xml:lang="en">
+                                    URLs of the images of the offer variation
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="variationPrice" type="xs:float">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        Price of the offer variation (including VAT)
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+            <xs:element name="variationExVatPrice" type="xs:float">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        Price of the offer variation (excluding VAT)
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+            <xs:element name="variationMarketplaceDetails">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="variationStock" type="xs:integer">
+                            <xs:annotation>
+                                <xs:documentation xml:lang="en">
+                                    Stock of the offer variation
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="variationStockThreshold" type="xs:integer">
+                            <xs:annotation>
+                                <xs:documentation xml:lang="en">
+                                    Stock threshold of the offer variation. If the stock becomes lesser than the threshold,
+                                    the offer variation will be hidden on Cocote.
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+
+        <xs:attribute name="id" type="xs:string">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    ID of the offer variation
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+</xs:schema>

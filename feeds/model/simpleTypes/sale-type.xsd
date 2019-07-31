@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="urn:Cocote.Feeds.Model.SimpleTypes.SaleType"
+           xmlns="urn:Cocote.Feeds.Model.SimpleTypes.SaleType"
+           elementFormDefault="qualified"
+>
+    <xs:simpleType name="saleType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="online"/>
+            <xs:enumeration value="physical"/>
+            <xs:enumeration value="marketplace"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
