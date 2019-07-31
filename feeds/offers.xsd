@@ -12,6 +12,7 @@
     <xs:include schemaLocation="model/simpleTypes/type.xsd"/>
     <xs:include schemaLocation="model/simpleTypes/shipping-delay.xsd"/>
     <xs:include schemaLocation="model/simpleTypes/sale-type.xsd"/>
+    <xs:include schemaLocation="model/simpleTypes/feed-version.xsd"/>
 
     <xs:include schemaLocation="model/complexTypes/location.xsd"/>
     <xs:include schemaLocation="model/complexTypes/opening-days-hours.xsd"/>
@@ -79,7 +80,7 @@
                                                     <xs:element name="title" type="xs:string">
                                                         <xs:annotation>
                                                             <xs:documentation xml:lang="en">
-                                                                The title of the offer.
+                                                                Title of the offer.
                                                             </xs:documentation>
                                                         </xs:annotation>
                                                     </xs:element>
@@ -87,7 +88,7 @@
                                                     <xs:element name="description" type="xs:string">
                                                         <xs:annotation>
                                                             <xs:documentation xml:lang="en">
-                                                                The description of the offer.
+                                                                Description of the offer.
                                                             </xs:documentation>
                                                         </xs:annotation>
                                                     </xs:element>
@@ -95,7 +96,7 @@
                                                     <xs:element name="keywords" type="xs:string">
                                                         <xs:annotation>
                                                             <xs:documentation xml:lang="en">
-                                                                The keywords of the offer.
+                                                                Keywords of the offer.
                                                             </xs:documentation>
                                                         </xs:annotation>
                                                     </xs:element>
@@ -103,7 +104,7 @@
                                                     <xs:element name="gtin" type="xs:string">
                                                         <xs:annotation>
                                                             <xs:documentation xml:lang="en">
-                                                                The international identifier of the offer.
+                                                                International identifier of the offer.
                                                             </xs:documentation>
                                                         </xs:annotation>
                                                     </xs:element>
@@ -111,7 +112,7 @@
                                                     <xs:element name="mpn" type="xs:string">
                                                         <xs:annotation>
                                                             <xs:documentation xml:lang="en">
-                                                                The manufacturer reference of the offer.
+                                                                Manufacturer reference of the offer.
                                                             </xs:documentation>
                                                         </xs:annotation>
                                                     </xs:element>
@@ -119,7 +120,7 @@
                                                     <xs:element name="brand" type="xs:string">
                                                         <xs:annotation>
                                                             <xs:documentation xml:lang="en">
-                                                                The brand of the offer
+                                                                Brand of the offer
                                                             </xs:documentation>
                                                         </xs:annotation>
                                                     </xs:element>
@@ -127,7 +128,7 @@
                                                     <xs:element name="category" type="category">
                                                         <xs:annotation>
                                                             <xs:documentation xml:lang="en">
-                                                                The category of the offer.
+                                                                Category of the offer.
                                                             </xs:documentation>
                                                         </xs:annotation>
                                                     </xs:element>
@@ -157,7 +158,7 @@
                                                     <xs:element name="state" type="state">
                                                         <xs:annotation>
                                                             <xs:documentation xml:lang="en">
-                                                                The state of the offer.
+                                                                State of the offer.
                                                             </xs:documentation>
                                                         </xs:annotation>
                                                     </xs:element>
@@ -180,7 +181,7 @@
                                                     <xs:element name="price" type="xs:float">
                                                         <xs:annotation>
                                                             <xs:documentation xml:lang="en">
-                                                                The price of the offer (included VAT).
+                                                                Price of the offer (included VAT).
                                                             </xs:documentation>
                                                         </xs:annotation>
                                                     </xs:element>
@@ -188,7 +189,7 @@
                                                     <xs:element name="exVatPrice" type="xs:float">
                                                         <xs:annotation>
                                                             <xs:documentation xml:lang="en">
-                                                                The price of the offer (ex VAT).
+                                                                Price of the offer (excluding VAT).
                                                             </xs:documentation>
                                                         </xs:annotation>
                                                     </xs:element>
@@ -261,6 +262,7 @@
                                                                             <xs:annotation>
                                                                                 <xs:documentation xml:lang="en">
                                                                                     Reference to the warehouse location
+                                                                                    previously described
                                                                                 </xs:documentation>
                                                                             </xs:annotation>
                                                                         </xs:attribute>
@@ -278,6 +280,7 @@
                                                                             <xs:annotation>
                                                                                 <xs:documentation xml:lang="en">
                                                                                     Reference to the shipping choice
+                                                                                    previously described
                                                                                 </xs:documentation>
                                                                             </xs:annotation>
                                                                         </xs:attribute>
@@ -302,6 +305,7 @@
                                                                             <xs:annotation>
                                                                                 <xs:documentation xml:lang="en">
                                                                                     Reference to the sale point
+                                                                                    previously described
                                                                                 </xs:documentation>
                                                                             </xs:annotation>
                                                                         </xs:attribute>
@@ -358,10 +362,19 @@
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>
+
             <xs:attribute name="generated" type="xs:dateTime" use="required">
                 <xs:annotation>
                     <xs:documentation xml:lang="en">
                         Generation date of the feed
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+
+            <xs:attribute name="feedVersion" type="feedVersion" use="required">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        The feed version your feed follow.
                     </xs:documentation>
                 </xs:annotation>
             </xs:attribute>

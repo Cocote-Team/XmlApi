@@ -3,6 +3,7 @@
         xsi:schemaLocation="../feeds/offers.xsd"
         xmlns="../feeds/offers.xsd"
         generated="2019-03-21T09:00:00"
+        feedVersion="2.0"
 >
     <warehouses>
         <warehouse id="1">

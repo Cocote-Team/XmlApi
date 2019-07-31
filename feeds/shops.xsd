@@ -12,6 +12,7 @@
     <xs:include schemaLocation="model/simpleTypes/type.xsd"/>
     <xs:include schemaLocation="model/simpleTypes/shipping-delay.xsd"/>
     <xs:include schemaLocation="model/simpleTypes/sale-type.xsd"/>
+    <xs:include schemaLocation="model/simpleTypes/feed-version.xsd"/>
 
     <xs:include schemaLocation="model/complexTypes/location.xsd"/>
     <xs:include schemaLocation="model/complexTypes/opening-days-hours.xsd"/>
@@ -29,14 +30,6 @@
                 <xs:element name="shop" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="id" type="xs:string" nillable="false">
-                                <xs:simpleType>
-                                    <xs:restriction base="xs:string">
-                                        <xs:minLength value="1"/>
-                                    </xs:restriction>
-                                </xs:simpleType>
-                            </xs:element>
-                            <xs:element name="updated" type="xs:dateTime"/>
                             <xs:element name="shopDetails">
                                 <xs:complexType>
                                     <xs:sequence>
@@ -252,10 +245,19 @@
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>
+
             <xs:attribute name="generated" type="xs:dateTime" use="required">
                 <xs:annotation>
                     <xs:documentation xml:lang="en">
                         Generation date of the feed
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+
+            <xs:attribute name="feedVersion" type="feedVersion" use="required">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        The feed version your feed follow.
                     </xs:documentation>
                 </xs:annotation>
             </xs:attribute>

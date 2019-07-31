@@ -3,12 +3,14 @@ XML API
 
 Here, you will find specification of *offers* and *shops* XML feeds.
 
-This work is in progress and may evolve.
-
 
 ## Offers feed
 
-To come ...
+This feed describes offers. It's relevant for both _shop_ and _agent_ account.
+
+Feeds are described with XSD files.
+
+You will find an example of offers feed in _examples/_ folder.
 
 
 ## Shops feed
@@ -20,9 +22,6 @@ The point of this feed for the agent is to automate the creation and the update 
 
 ### Access to shops feed
 
-As this feed contains some sensitive data, we need this feed is available via an authentication method (oauth2).
+This feed should be accessible via an URL containing a hash to avoid anyone can find it.
 
-In your Cocote account, you will be asked for following information:
-* url of shop feeds
-* id for oauth authentication
-* secret for oauth authentication
+You will be asked for this URL in your Cocote agent account.
