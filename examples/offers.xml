@@ -4,7 +4,7 @@
         xmlns="../feeds/offers.xsd"
         generated="2019-03-21T09:00:00"
 >
-    <offer id="123" updated="1552986464">
+    <offer id="123" updated="2019-03-20T09:00:00">
         <offerDetails>
             <title>Titre du produit</title>
             <description>Description du produit</description>

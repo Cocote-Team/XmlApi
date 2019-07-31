@@ -153,6 +153,7 @@
                                                 </xs:documentation>
                                             </xs:annotation>
                                         </xs:element>
+
                                         <xs:element name="labels">
                                             <xs:complexType>
                                                 <xs:sequence>
@@ -167,30 +168,87 @@
                                                 </xs:sequence>
                                             </xs:complexType>
                                         </xs:element>
+
                                         <xs:element name="saleTypes">
                                             <xs:complexType>
                                                 <xs:sequence>
-                                                    <xs:element name="saleType" type="saleType" maxOccurs="unbounded"/>
+                                                    <xs:element name="saleType" type="saleType" maxOccurs="unbounded">
+                                                        <xs:annotation>
+                                                            <xs:documentation xml:lang="en">
+                                                                The default sale types for offers.
+                                                            </xs:documentation>
+                                                        </xs:annotation>
+                                                    </xs:element>
                                                 </xs:sequence>
                                             </xs:complexType>
                                         </xs:element>
-                                        <xs:element name="state" type="state"/>
-                                        <xs:element name="brand" type="xs:string"/>
+
+                                        <xs:element name="state" type="state">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en">
+                                                    The default state for offers.
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+
+                                        <xs:element name="brand" type="xs:string">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en">
+                                                    The default brand for offers.
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+
                                         <xs:element name="types">
                                             <xs:complexType>
                                                 <xs:sequence>
-                                                    <xs:element name="type" type="type" maxOccurs="unbounded"/>
+                                                    <xs:element name="type" type="type" maxOccurs="unbounded">
+                                                        <xs:annotation>
+                                                            <xs:documentation xml:lang="en">
+                                                                The default types for offers.
+                                                            </xs:documentation>
+                                                        </xs:annotation>
+                                                    </xs:element>
                                                 </xs:sequence>
                                             </xs:complexType>
                                         </xs:element>
-                                        <xs:element name="distance" type="xs:integer"/>
-                                        <xs:element name="keywords" type="xs:string"/>
+
+                                        <xs:element name="distance" type="xs:integer">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en">
+                                                    The distance in which we can show the offers to a visitor
+                                                    (based on its location).
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+
+                                        <xs:element name="keywords" type="xs:string">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en">
+                                                    The default keywords for offers.
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
                                     </xs:sequence>
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
-                        <xs:attribute name="id" type="xs:string"/>
-                        <xs:attribute name="updated" type="xs:integer"/>
+
+                        <xs:attribute name="id" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation xml:lang="en">
+                                    ID of the offer
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:attribute>
+
+                        <xs:attribute name="updated" type="xs:dateTime">
+                            <xs:annotation>
+                                <xs:documentation xml:lang="en">
+                                   Modification date of the offer
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:attribute>
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>

@@ -4,7 +4,7 @@
        xmlns="../feeds/shops.xsd"
        generated="2019-03-21T09:00:00"
 >
-    <shop id="123" updated="1552986464">
+    <shop id="123" updated="2019-03-19T09:00:00">
         <shopDetails>
             <name>La ferme bio</name>
             <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sagittis et justo sed tincidunt.

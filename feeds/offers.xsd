@@ -262,7 +262,7 @@
                             </xs:element>
                         </xs:sequence>
                         <xs:attribute name="id" type="xs:string"/>
-                        <xs:attribute name="updated" type="xs:integer"/>
+                        <xs:attribute name="updated" type="xs:dateTime"/>
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>
