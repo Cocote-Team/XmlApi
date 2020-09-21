@@ -33,7 +33,15 @@
                         <xs:element name="description" type="xs:string">
                             <xs:annotation>
                                 <xs:documentation xml:lang="en">
-                                    Description of the offer.
+                                    Description of the offer (only plain text).
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+
+                        <xs:element name="shortDescription" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation xml:lang="en">
+                                    Short description of the offer (only plain text).
                                 </xs:documentation>
                             </xs:annotation>
                         </xs:element>

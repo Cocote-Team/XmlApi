@@ -129,6 +129,7 @@
             <offerDetails>
                 <title>Titre du produit</title>
                 <description>Description du produit</description>
+                <shortDescription>Description courte du produit</shortDescription>
                 <keywords>mot clé 1, mot clé 2, ...</keywords>
                 <gtin>AZERTY-123456789</gtin>
                 <mpn>AZERTY-123456789</mpn>
