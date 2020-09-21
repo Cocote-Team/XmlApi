@@ -144,6 +144,10 @@
                 </types>
                 <producer>true</producer>
                 <state>new</state>
+                <ages>
+                    <age>baby</age>
+                    <age>child</age>
+                </ages>
                 <distance>50.0</distance>
                 <price>60.00</price>
                 <exVatPrice>50.00</exVatPrice>

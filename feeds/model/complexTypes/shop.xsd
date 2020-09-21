@@ -10,6 +10,8 @@
     <xs:include schemaLocation="../simpleTypes/payment.xsd"/>
     <xs:include schemaLocation="../simpleTypes/state.xsd"/>
     <xs:include schemaLocation="../simpleTypes/type.xsd"/>
+    <xs:include schemaLocation="../simpleTypes/age.xsd"/>
+    <xs:include schemaLocation="../simpleTypes/gender.xsd"/>
     <xs:include schemaLocation="../simpleTypes/sale-type.xsd"/>
 
     <xs:include schemaLocation="../complexTypes/location.xsd"/>
@@ -197,6 +199,34 @@
                                         <xs:annotation>
                                             <xs:documentation xml:lang="en">
                                                 The default types for offers.
+                                            </xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+
+                        <xs:element name="genders">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="gender" type="gender" maxOccurs="unbounded">
+                                        <xs:annotation>
+                                            <xs:documentation xml:lang="en">
+                                                The default genders for offers (if relevant).
+                                            </xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+
+                        <xs:element name="ages">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="age" type="age" maxOccurs="unbounded">
+                                        <xs:annotation>
+                                            <xs:documentation xml:lang="en">
+                                                The default ages for offers.
                                             </xs:documentation>
                                         </xs:annotation>
                                     </xs:element>

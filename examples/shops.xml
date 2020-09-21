@@ -154,6 +154,12 @@
             <types>
                 <type>gift</type>
             </types>
+            <genders/>
+            <ages>
+                <age>baby</age>
+                <age>child</age>
+                <age>teenager</age>
+            </ages>
             <producer>false</producer>
             <distance/>
             <keywords/>
