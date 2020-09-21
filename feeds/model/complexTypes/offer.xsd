@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="urn:Cocote.Feeds.Model.ComplexTypes.Offer"
+           xmlns="urn:Cocote.Feeds.Model.ComplexTypes.Offer"
+           elementFormDefault="qualified"
+>
+    <xs:include schemaLocation="../simpleTypes/boolean.xsd"/>
+    <xs:include schemaLocation="../simpleTypes/category.xsd"/>
+    <xs:include schemaLocation="../simpleTypes/currency.xsd"/>
+    <xs:include schemaLocation="../simpleTypes/label.xsd"/>
+    <xs:include schemaLocation="../simpleTypes/payment.xsd"/>
+    <xs:include schemaLocation="../simpleTypes/state.xsd"/>
+    <xs:include schemaLocation="../simpleTypes/type.xsd"/>
+    <xs:include schemaLocation="../simpleTypes/sale-type.xsd"/>
+
+    <xs:include schemaLocation="../complexTypes/sale-point.xsd"/>
+    <xs:include schemaLocation="../complexTypes/shipping.xsd"/>
+    <xs:include schemaLocation="../complexTypes/offer-variation.xsd"/>
+
+    <xs:complexType name="offer">
+        <xs:sequence>
+            <xs:element name="offerDetails">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="title" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation xml:lang="en">
+                                    Title of the offer.
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+
+                        <xs:element name="description" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation xml:lang="en">
+                                    Description of the offer.
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+
+                        <xs:element name="keywords" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation xml:lang="en">
+                                    Keywords of the offer.
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+
+                        <xs:element name="gtin" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation xml:lang="en">
+                                    International identifier of the offer.
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+
+                        <xs:element name="mpn" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation xml:lang="en">
+                                    Manufacturer reference of the offer.
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+
+                        <xs:element name="brand" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation xml:lang="en">
+                                    Brand of the offer
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+
+                        <xs:element name="category" type="category">
+                            <xs:annotation>
+                                <xs:documentation xml:lang="en">
+                                    Category of the offer.
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+
+                        <xs:element name="labels">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="label" type="label" maxOccurs="unbounded">
+                                        <xs:annotation>
+                                            <xs:documentation xml:lang="en">
+                                                Labels of the offer
+                                            </xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+
+                        <xs:element name="saleTypes">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="saleType" type="saleType" maxOccurs="unbounded"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+
+                        <xs:element name="state" type="state">
+                            <xs:annotation>
+                                <xs:documentation xml:lang="en">
+                                    State of the offer.
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+
+                        <xs:element name="types">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="type" type="type" maxOccurs="unbounded"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+
+                        <xs:element name="producer" type="boolean">
+                            <xs:annotation>
+                                <xs:documentation xml:lang="en">
+                                    Has the offer been produced by shop?
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+
+                        <xs:element name="distance" type="xs:integer">
+                            <xs:annotation>
+                                <xs:documentation xml:lang="en">
+                                    The distance in which we can show the offer to a visitor (based on its location).
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+
+                        <xs:element name="price" type="xs:float">
+                            <xs:annotation>
+                                <xs:documentation xml:lang="en">
+                                    Price of the offer (included VAT).
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+
+                        <xs:element name="exVatPrice" type="xs:float">
+                            <xs:annotation>
+                                <xs:documentation xml:lang="en">
+                                    Price of the offer (excluding VAT).
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+
+                        <xs:element name="vat" type="xs:float">
+                            <xs:annotation>
+                                <xs:documentation xml:lang="en">
+                                    Applied VAT in percent
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+
+                        <xs:element name="currency" type="currency">
+                            <xs:annotation>
+                                <xs:documentation xml:lang="en">
+                                    Currency code
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+
+                        <xs:element name="images">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="image" type="xs:string" maxOccurs="unbounded">
+                                        <xs:annotation>
+                                            <xs:documentation xml:lang="en">
+                                                URLs of the images of the offer
+                                            </xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+
+                        <xs:element name="variations">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="variation" type="offerVariation" maxOccurs="unbounded">
+                                        <xs:annotation>
+                                            <xs:documentation xml:lang="en">
+                                                Images of the offer
+                                            </xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="onlineSalesDetails">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="link" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation xml:lang="en">
+                                    Link of the offer
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+
+                        <xs:element name="onlinePayments">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="payment" type="payment"
+                                                maxOccurs="unbounded"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+
+                        <xs:element name="warehouses">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="warehouse" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                            <xs:attribute name="ref" type="xs:string">
+                                                <xs:annotation>
+                                                    <xs:documentation xml:lang="en">
+                                                        Reference to the warehouse location
+                                                        previously described
+                                                    </xs:documentation>
+                                                </xs:annotation>
+                                            </xs:attribute>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="shippingChoices">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="shippingChoice" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                            <xs:attribute name="ref" type="xs:string">
+                                                <xs:annotation>
+                                                    <xs:documentation xml:lang="en">
+                                                        Reference to the shipping choice
+                                                        previously described
+                                                    </xs:documentation>
+                                                </xs:annotation>
+                                            </xs:attribute>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="physicalSalesDetails">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="salePoints">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="salePoint" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                            <xs:attribute name="ref" type="xs:string">
+                                                <xs:annotation>
+                                                    <xs:documentation xml:lang="en">
+                                                        Reference to the sale point
+                                                        previously described
+                                                    </xs:documentation>
+                                                </xs:annotation>
+                                            </xs:attribute>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="marketplaceDetails">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="stock" type="xs:integer">
+                            <xs:annotation>
+                                <xs:documentation xml:lang="en">
+                                    Stock of the offer
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="stockThreshold" type="xs:integer">
+                            <xs:annotation>
+                                <xs:documentation xml:lang="en">
+                                    Stock threshold of the offer. If the stock becomes lesser than the threshold,
+                                    the offer will be hidden on Cocote.
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+
+        <xs:attribute name="id" type="xs:string">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    ID of the offer
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+
+        <xs:attribute name="updated" type="xs:dateTime">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    Modification date of the offer
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+</xs:schema>
