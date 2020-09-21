@@ -175,7 +175,18 @@
                         <variationMarketplaceDetails>
                             <variationStock>456</variationStock>
                             <variationStockThreshold>20</variationStockThreshold>
+                            <variationWeight>13.45</variationWeight>
                         </variationMarketplaceDetails>
+                        <variationOptions>
+                            <variationOption>
+                                <type>color</type>
+                                <value>yellow</value>
+                            </variationOption>
+                            <variationOption>
+                                <type>size</type>
+                                <value>M</value>
+                            </variationOption>
+                        </variationOptions>
                     </variation>
                 </variations>
             </offerDetails>
@@ -201,6 +212,7 @@
             <marketplaceDetails>
                 <stock>456</stock>
                 <stockThreshold>10</stockThreshold>
+                <weight>12.34</weight>
             </marketplaceDetails>
         </offer>
     </items>

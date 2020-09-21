@@ -332,6 +332,20 @@
                                 </xs:documentation>
                             </xs:annotation>
                         </xs:element>
+                        <xs:element name="weight" type="xs:float">
+                            <xs:annotation>
+                                <xs:documentation xml:lang="en">
+                                    The weight (in kg) of the product.
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="volume" type="xs:float">
+                            <xs:annotation>
+                                <xs:documentation xml:lang="en">
+                                    The volume (in liters) of the product.
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>

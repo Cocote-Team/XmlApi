@@ -54,12 +54,26 @@
                 </xs:annotation>
             </xs:element>
 
-            <xs:element name="variationOptions" type="option">
+            <xs:element name="variationVat" type="xs:float">
                 <xs:annotation>
                     <xs:documentation xml:lang="en">
-                        The list of options which corresponds to the product.
+                        Percentage used for VAT.
                     </xs:documentation>
                 </xs:annotation>
+            </xs:element>
+
+            <xs:element name="variationOptions">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="variationOption" type="option">
+                            <xs:annotation>
+                                <xs:documentation xml:lang="en">
+                                    The list of options which corresponds to the product.
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
             </xs:element>
 
             <xs:element name="variationMarketplaceDetails">
@@ -80,17 +94,17 @@
                                 </xs:documentation>
                             </xs:annotation>
                         </xs:element>
-                        <xs:element name="weight" type="xs:float">
+                        <xs:element name="variationWeight" type="xs:float">
                             <xs:annotation>
                                 <xs:documentation xml:lang="en">
-                                    The weight (in kg) of the product.
+                                    The weight (in kg) of the product variation.
                                 </xs:documentation>
                             </xs:annotation>
                         </xs:element>
-                        <xs:element name="volume" type="xs:float">
+                        <xs:element name="variationVolume" type="xs:float">
                             <xs:annotation>
                                 <xs:documentation xml:lang="en">
-                                    The volume (in liters) of the product.
+                                    The volume (in liters) of the product variation.
                                 </xs:documentation>
                             </xs:annotation>
                         </xs:element>
