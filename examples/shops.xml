@@ -2,6 +2,8 @@
 <shops xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns="urn:Cocote.Feeds.Model.ComplexTypes.Marketplace.HomeDelivery"
        xmlns="urn:Cocote.Feeds.Model.ComplexTypes.Marketplace.MarketplaceDelivery"
+       xmlns="urn:Cocote.Feeds.Model.ComplexTypes.Marketplace.MarketplaceDelivery"
+       xmlns="urn:Cocote.Feeds.Model.ComplexTypes.Marketplace.HomeDelivery"
        xsi:schemaLocation="../feeds/shops.xsd"
        xmlns="../feeds/shops.xsd"
        generated="2019-03-21T09:00:00"
@@ -162,6 +164,48 @@
                             <delay_value>3</delay_value>
                             <hour_limit>15</hour_limit>
                             <work_on_saturday>true</work_on_saturday>
+                        </homeDelivery>
+                    </deliveryData>
+                </delivery>
+                <delivery>
+                    <type>home-delivery</type>
+                    <deliveryData>
+                        <homeDelivery>
+                            <transporter>ups</transporter>
+                            <shippingCosts>
+                                <fixedShippingCosts>
+                                    <base>itemsNumber</base>
+                                    <grid>
+                                        <slice>
+                                            <start>1</start>
+                                            <end>2</end>
+                                            <cost>1.5</cost>
+                                        </slice>
+                                        <slice>
+                                            <start>3</start>
+                                            <end>4</end>
+                                            <cost>2.5</cost>
+                                        </slice>
+                                        <slice>
+                                            <start>5</start>
+                                            <end>8</end>
+                                            <cost>9</cost>
+                                        </slice>
+                                        <slice>
+                                            <start>10</start>
+                                            <end>0</end>
+                                            <cost>0</cost>
+                                        </slice>
+                                    </grid>
+                                    <corseExtraCharge>5</corseExtraCharge>
+                                    <domTomExtraCharge>8</domTomExtraCharge>
+                                    <currency>EUR</currency>
+                                </fixedShippingCosts>
+                            </shippingCosts>
+                            <hour_limit></hour_limit>
+                            <delay_value></delay_value>
+                            <delay_unit></delay_unit>
+                            <work_on_saturday></work_on_saturday>
                         </homeDelivery>
                     </deliveryData>
                 </delivery>
