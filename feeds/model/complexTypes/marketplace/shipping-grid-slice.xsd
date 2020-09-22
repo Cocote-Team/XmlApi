@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="urn:Cocote.Feeds.Model.ComplexTypes.Marketplace.ShippingGridSlice"
+           xmlns="urn:Cocote.Feeds.Model.ComplexTypes.Marketplace.ShippingGridSlice"
+           elementFormDefault="qualified"
+>
+    <xs:complexType name="shippingGridSlice">
+        <xs:sequence>
+            <xs:element name="start" type="xs:float">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        The starting price of the slice.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="end" type="xs:float">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        The ending price of the slice.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="cost" type="xs:float">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        The shipping cost for the slice.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+           targetNamespace="urn:Cocote.Feeds.Model.ComplexTypes.Marketplace.HomeDelivery"
+           xmlns="urn:Cocote.Feeds.Model.ComplexTypes.Marketplace.HomeDelivery"
+           elementFormDefault="qualified"
+           vc:minVersion="1.1"
+>
+    <xs:include schemaLocation="../../simpleTypes/marketplace/shipping-base.xsd"/>
+    <xs:include schemaLocation="../../simpleTypes/marketplace/home-delivery-transporter.xsd"/>
+    <xs:include schemaLocation="../../simpleTypes/marketplace/delay-unit.xsd"/>
+
+    <xs:include schemaLocation="../../complexTypes/marketplace/floating-shipping-costs.xsd"/>
+    <xs:include schemaLocation="../../complexTypes/marketplace/fixed-shipping-costs.xsd"/>
+
+    <xs:complexType name="homeDelivery">
+        <xs:sequence>
+            <xs:element name="transporter" maxOccurs="1" type="homeDeliveryTransporter"/>
+
+            <xs:element name="shippingCosts" maxOccurs="1">
+                <xs:complexType>
+                    <xs:choice>
+                        <xs:element name="floatingShippingCosts" type="floatingShippingCosts"/>
+                        <xs:element name="fixedShippingCosts" type="fixedShippingCosts"/>
+                    </xs:choice>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="hour_limit" type="xs:integer">
+                <xs:restriction base="xs:integer">
+                    <xs:minInclusive value="0"/>
+                    <xs:maxInclusive value="23"/>
+                </xs:restriction>
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        The moment in the day where the delay starts.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+            <xs:element name="delay_value" type="xs:integer">
+                <xs:restriction base="xs:integer">
+                    <xs:minInclusive value="0"/>
+                </xs:restriction>
+            </xs:element>
+
+            <xs:element name="delay_unit" type="delayUnit"/>
+
+            <xs:element name="work_on_saturday" type="xs:boolean"/>
+        </xs:sequence>
+
+    </xs:complexType>
+</xs:schema>

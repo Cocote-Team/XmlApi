@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
            targetNamespace="urn:Cocote.Feeds.Model.ComplexTypes.Shop"
            xmlns="urn:Cocote.Feeds.Model.ComplexTypes.Shop"
            elementFormDefault="qualified"
+           vc:minVersion="1.1"
 >
     <xs:include schemaLocation="../simpleTypes/category.xsd"/>
     <xs:include schemaLocation="../simpleTypes/boolean.xsd"/>
@@ -17,6 +19,7 @@
     <xs:include schemaLocation="../complexTypes/location.xsd"/>
     <xs:include schemaLocation="../complexTypes/sale-point.xsd"/>
     <xs:include schemaLocation="../complexTypes/shipping.xsd"/>
+    <xs:include schemaLocation="../complexTypes/marketplace/marketplace-delivery.xsd"/>
 
     <xs:complexType name="shop">
         <xs:sequence>
@@ -122,6 +125,44 @@
                                     <xs:element name="salePoint" type="salePoint" maxOccurs="unbounded"/>
                                 </xs:sequence>
                             </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="marketplaceDetails">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="deliveries">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="delivery" type="marketplaceDelivery" maxOccurs="unbounded">
+                                        <xs:annotation>
+                                            <xs:documentation xml:lang="en">
+                                                Available delivery methods.
+                                            </xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+
+                        <xs:element name="priceModifier" type="xs:float">
+                            <xs:restriction base="xs:integer">
+                                <xs:minInclusive value="-50"/>
+                                <xs:maxInclusive value="50"/>
+                            </xs:restriction>
+                            <xs:annotation>
+                                <xs:documentation xml:lang="en">
+                                    A global price modifier (in percentage) to apply to each product sold in marketplace chanel.
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="openings" type="openingDaysHours">
+                            <xs:annotation>
+                                <xs:documentation xml:lang="en">
+                                    Opening hours of the company (needed to compute shipping date based on provided delays).
+                                </xs:documentation>
+                            </xs:annotation>
                         </xs:element>
                     </xs:sequence>
                 </xs:complexType>

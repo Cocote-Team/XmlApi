@@ -1,0 +1,45 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="urn:Cocote.Feeds.Model.SimpleTypes.Marketplace.MarketplaceShippingDelay"
+           xmlns="urn:Cocote.Feeds.Model.SimpleTypes.Marketplace.MarketplaceShippingDelay"
+           elementFormDefault="qualified"
+>
+    <xs:simpleType name="marketplaceShippingDelay">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="-1d">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        Shipped in less than 1 working day
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="-3d">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        Shipped in less than 3 working days
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="-5d">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        Shipped in less than 5 working days
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="-10d">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        Shipped in less than 10 working days
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="+10d">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        Shipped in more than 10 working days
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

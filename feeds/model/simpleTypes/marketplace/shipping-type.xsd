@@ -1,0 +1,12 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="urn:Cocote.Feeds.Model.SimpleTypes.Marketplace.ShippingType"
+           xmlns="urn:Cocote.Feeds.Model.SimpleTypes.Marketplace.ShippingType"
+           elementFormDefault="qualified"
+>
+    <xs:simpleType name="shippingType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="home-delivery"/>
+            <xs:enumeration value="click-and-collect"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+           targetNamespace="urn:Cocote.Feeds.Model.ComplexTypes.Marketplace.MarketplaceDelivery"
+           xmlns="urn:Cocote.Feeds.Model.ComplexTypes.Marketplace.MarketplaceDelivery"
+           elementFormDefault="qualified"
+           vc:minVersion="1.1"
+>
+    <xs:include schemaLocation="../../simpleTypes/marketplace/shipping-type.xsd"/>
+
+    <xs:include schemaLocation="../../complexTypes/marketplace/home-delivery.xsd"/>
+    <xs:include schemaLocation="../../complexTypes/marketplace/click-n-collect-delivery.xsd"/>
+
+    <xs:complexType name="marketplaceDelivery">
+        <xs:sequence>
+            <xs:element name="type" type="shippingType"/>
+            <xs:element name="deliveryData" maxOccurs="1">
+                <xs:complexType>
+                    <xs:choice>
+                        <xs:element name="homeDelivery" type="homeDelivery"/>
+                        <xs:element name="clickNCollectDelivery" type="clickNCollectDelivery"/>
+                    </xs:choice>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

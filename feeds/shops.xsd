@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
            targetNamespace="urn:Cocote.Feeds.Shops"
            xmlns="urn:Cocote.Feeds.Shops"
            elementFormDefault="qualified"
+           vc:minVersion="1.1"
 >
     <xs:include schemaLocation="model/simpleTypes/feed-version.xsd"/>
 

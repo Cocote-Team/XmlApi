@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="urn:Cocote.Feeds.Model.SimpleTypes.Marketplace.ShippingBase"
+           xmlns="urn:Cocote.Feeds.Model.SimpleTypes.Marketplace.ShippingBase"
+           elementFormDefault="qualified"
+>
+    <xs:simpleType name="shippingBase">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="itemsNumber">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        Shipping grid based on the number of items.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="weight">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        Shipping grid based on weight (in kg).
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="volume">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        Shipping grid based on volume (in liters).
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="price">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        Shipping grid based on items price (in kg).
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

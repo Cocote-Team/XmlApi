@@ -1,0 +1,17 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="urn:Cocote.Feeds.Model.SimpleTypes.Marketplace.HomeDeliveryTransporter"
+           xmlns="urn:Cocote.Feeds.Model.SimpleTypes.Marketplace.HomeDeliveryTransporter"
+           elementFormDefault="qualified"
+>
+    <xs:simpleType name="homeDeliveryTransporter">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="mondia-relay"/>
+            <xs:enumeration value="colissimo-relay"/>
+            <xs:enumeration value="relais-colis"/>
+            <xs:enumeration value="gls-retrait"/>
+            <xs:enumeration value="chrono-pickup"/>
+            <xs:enumeration value="relais-tnt"/>
+            <xs:enumeration value="ups-relais"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

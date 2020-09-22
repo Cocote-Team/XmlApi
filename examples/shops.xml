@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <shops xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="urn:Cocote.Feeds.Model.ComplexTypes.Marketplace.HomeDelivery"
+       xmlns="urn:Cocote.Feeds.Model.ComplexTypes.Marketplace.MarketplaceDelivery"
        xsi:schemaLocation="../feeds/shops.xsd"
        xmlns="../feeds/shops.xsd"
        generated="2019-03-21T09:00:00"
@@ -140,6 +142,86 @@
                 </salePoint>
             </salePoints>
         </physicalSalesDetails>
+        <marketplaceDetails>
+            <deliveries>
+                <delivery>
+                    <type>home-delivery</type>
+                    <deliveryData>
+                        <homeDelivery>
+                            <transporter>dhl</transporter>
+                            <shippingCosts>
+                                <floatingShippingCosts>
+                                    <franco>50</franco>
+                                    <averageCost>8.50</averageCost>
+                                    <corseExtraCharge>7</corseExtraCharge>
+                                    <domTomExtraCharge>10</domTomExtraCharge>
+                                    <currency>EUR</currency>
+                                </floatingShippingCosts>
+                            </shippingCosts>
+                            <delay_unit>day</delay_unit>
+                            <delay_value>3</delay_value>
+                            <hour_limit>15</hour_limit>
+                            <work_on_saturday>true</work_on_saturday>
+                        </homeDelivery>
+                    </deliveryData>
+                </delivery>
+                <delivery>
+                    <type>click-and-collect</type>
+                    <deliveryData>
+                        <clickNCollectDelivery>
+                            <delay_value>2</delay_value>
+                            <delay_unit>hour</delay_unit>
+                        </clickNCollectDelivery>
+                    </deliveryData>
+                </delivery>
+            </deliveries>
+            <priceModifier>5</priceModifier>
+            <openings>
+                <monday>
+                    <timeSlot>
+                        <start>08:00</start>
+                        <end>18:00</end>
+                    </timeSlot>
+                </monday>
+                <tuesday>
+                    <timeSlot>
+                        <start>08:00</start>
+                        <end>18:00</end>
+                    </timeSlot>
+                </tuesday>
+                <wednesday>
+                    <timeSlot>
+                        <start>08:00</start>
+                        <end>18:00</end>
+                    </timeSlot>
+                </wednesday>
+                <thursday>
+                    <timeSlot>
+                        <start>08:00</start>
+                        <end>18:00</end>
+                    </timeSlot>
+                </thursday>
+                <friday>
+                    <timeSlot>
+                        <start>08:00</start>
+                        <end>18:00</end>
+                    </timeSlot>
+                </friday>
+                <saturday>
+                    <timeSlot>
+                        <start>08:00</start>
+                        <end>18:00</end>
+                    </timeSlot>
+                </saturday>
+                <sunday>
+                    <timeSlot>
+                        <start>08:00</start>
+                        <end>18:00</end>
+                    </timeSlot>
+                </sunday>
+                <additionalInfo/>
+            </openings>
+        </marketplaceDetails>
         <globalProductsData>
             <category>food</category>
             <labels>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="urn:Cocote.Feeds.Model.ComplexTypes.Marketplace.FixedShippingCosts"
+           xmlns="urn:Cocote.Feeds.Model.ComplexTypes.Marketplace.FixedShippingCosts"
+           elementFormDefault="qualified"
+>
+    <xs:include schemaLocation="../../simpleTypes/marketplace/shipping-base.xsd"/>
+
+    <xs:include schemaLocation="../../complexTypes/marketplace/shipping-grid-slice.xsd"/>
+
+    <xs:complexType name="fixedShippingCosts">
+        <xs:sequence>
+            <xs:element name="base" type="shippingBase">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        The base used to compute shipping costs.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="grid">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="slice" type="shippingGridSlice" maxOccurs="unbounded">
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="corseExtraCharge" type="xs:float">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        Extra charge amount for shipping in Corse.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="domTomExtraCharge" type="xs:float">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        Extra charge amount for shipping in DOM-TOM.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="currency" type="currency">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        The currency used to describe shipping costs.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

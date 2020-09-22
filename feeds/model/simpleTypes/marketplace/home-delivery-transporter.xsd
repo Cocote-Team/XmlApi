@@ -1,0 +1,23 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="urn:Cocote.Feeds.Model.SimpleTypes.Marketplace.HomeDeliveryTransporter"
+           xmlns="urn:Cocote.Feeds.Model.SimpleTypes.Marketplace.HomeDeliveryTransporter"
+           elementFormDefault="qualified"
+>
+    <xs:simpleType name="homeDeliveryTransporter">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="colis-prive"/>
+            <xs:enumeration value="la-poste-colissimo"/>
+            <xs:enumeration value="la-poste-lettre"/>
+            <xs:enumeration value="lettre-suivie"/>
+            <xs:enumeration value="dpd-chronopost"/>
+            <xs:enumeration value="fedex"/>
+            <xs:enumeration value="tnt"/>
+            <xs:enumeration value="ups"/>
+            <xs:enumeration value="dhl"/>
+            <xs:enumeration value="geodis"/>
+            <xs:enumeration value="france-express"/>
+            <xs:enumeration value="gls"/>
+            <xs:enumeration value="schenker"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

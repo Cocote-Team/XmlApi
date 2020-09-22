@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="urn:Cocote.Feeds.Model.ComplexTypes.Marketplace.FloatShippingCosts"
+           xmlns="urn:Cocote.Feeds.Model.ComplexTypes.Marketplace.FloatShippingCosts"
+           elementFormDefault="qualified"
+>
+    <xs:include schemaLocation="../../simpleTypes/currency.xsd"/>
+
+    <xs:complexType name="floatingShippingCosts">
+        <xs:sequence>
+            <xs:element name="franco" type="xs:float">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        Minimum amount to noy pay shipping costs.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="averageCost" type="xs:float">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        Average amount for shipping costs of the shop.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="corseExtraCharge" type="xs:float">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        Extra charge amount for shipping in Corse.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="domTomExtraCharge" type="xs:float">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        Extra charge amount for shipping in DOM-TOM.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="currency" type="currency">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        The currency used to describe shipping costs.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

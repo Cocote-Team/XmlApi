@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+           targetNamespace="urn:Cocote.Feeds.Model.ComplexTypes.Marketplace.ClickNCollectDelivery"
+           xmlns="urn:Cocote.Feeds.Model.ComplexTypes.Marketplace.ClickNCollectDelivery"
+           elementFormDefault="qualified"
+           vc:minVersion="1.1"
+>
+    <xs:include schemaLocation="../../simpleTypes/marketplace/delay-unit.xsd"/>
+
+    <xs:complexType name="clickNCollectDelivery">
+        <xs:sequence>
+            <xs:element name="delay_value" type="xs:integer">
+                <xs:restriction base="xs:integer">
+                    <xs:minInclusive value="0"/>
+                </xs:restriction>
+            </xs:element>
+
+            <xs:element name="delay_unit" type="delayUnit"/>
+        </xs:sequence>
+
+    </xs:complexType>
+</xs:schema>
