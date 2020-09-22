@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="urn:Cocote.Feeds.Model.ComplexTypes.HolidaysPeriod"
+           xmlns="urn:Cocote.Feeds.Model.ComplexTypes.HolidaysPeriod"
+           elementFormDefault="qualified"
+>
+    <xs:include schemaLocation="time-slots-day.xsd"/>
+
+    <xs:complexType name="holidaysPeriod">
+        <xs:sequence>
+            <xs:element name="start" type="xs:dateTime"/>
+            <xs:element name="end" type="xs:dateTime"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

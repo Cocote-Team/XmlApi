@@ -82,6 +82,15 @@
                                 </xs:documentation>
                             </xs:annotation>
                         </xs:element>
+
+                        <xs:element name="globalOpenings" type="openingDaysHours">
+                            <xs:annotation>
+                                <xs:documentation xml:lang="en">
+                                    Global config for company openings.
+                                    This can be overridden for sale-points or orders processing.
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>

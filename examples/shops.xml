@@ -24,6 +24,57 @@
             </saleTypes>
             <shopUrl>https://website.ext</shopUrl>
             <feedUrl>https://website.ext/xml-feed-path</feedUrl>
+            <globalOpenings>
+                <monday>
+                    <timeSlot>
+                        <start>08:00</start>
+                        <end>20:00</end>
+                    </timeSlot>
+                </monday>
+                <tuesday>
+                    <timeSlot>
+                        <start>08:00</start>
+                        <end>18:00</end>
+                    </timeSlot>
+                </tuesday>
+                <wednesday>
+                    <timeSlot>
+                        <start>08:00</start>
+                        <end>18:00</end>
+                    </timeSlot>
+                </wednesday>
+                <thursday>
+                    <timeSlot>
+                        <start>08:00</start>
+                        <end>18:00</end>
+                    </timeSlot>
+                </thursday>
+                <friday>
+                    <timeSlot>
+                        <start>08:00</start>
+                        <end>18:00</end>
+                    </timeSlot>
+                </friday>
+                <saturday>
+                    <timeSlot>
+                        <start>08:00</start>
+                        <end>18:00</end>
+                    </timeSlot>
+                </saturday>
+                <sunday>
+                    <timeSlot>
+                        <start>08:00</start>
+                        <end>18:00</end>
+                    </timeSlot>
+                </sunday>
+                <additionalInfo/>
+                <holidaysPeriods>
+                    <holidaysPeriod>
+                        <start>01-07-2020T18:00:00</start>
+                        <end>31-08-2020T18:00:00</end>
+                    </holidaysPeriod>
+                </holidaysPeriods>
+            </globalOpenings>
         </shopDetails>
         <onlineSalesDetails>
             <warehouseLocations>
@@ -140,6 +191,7 @@
                         </saturday>
                         <sunday/>
                         <additionalInfo>Fermeture les jours fériés.</additionalInfo>
+                        <holidaysPeriods/>
                     </salePointOpenings>
                 </salePoint>
             </salePoints>
@@ -264,6 +316,7 @@
                     </timeSlot>
                 </sunday>
                 <additionalInfo/>
+                <holidaysPeriods/>
             </openings>
         </marketplaceDetails>
         <globalProductsData>
