@@ -202,10 +202,10 @@
                                     <currency>EUR</currency>
                                 </fixedShippingCosts>
                             </shippingCosts>
-                            <hour_limit></hour_limit>
-                            <delay_value></delay_value>
-                            <delay_unit></delay_unit>
-                            <work_on_saturday></work_on_saturday>
+                            <hour_limit>14</hour_limit>
+                            <delay_value>8</delay_value>
+                            <delay_unit>hour</delay_unit>
+                            <work_on_saturday>false</work_on_saturday>
                         </homeDelivery>
                     </deliveryData>
                 </delivery>
