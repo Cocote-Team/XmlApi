@@ -198,7 +198,7 @@
         </physicalSalesDetails>
         <marketplaceDetails>
             <deliveries>
-                <delivery>
+                <delivery id="123">
                     <type>home-delivery</type>
                     <deliveryData>
                         <homeDelivery>
@@ -219,7 +219,7 @@
                         </homeDelivery>
                     </deliveryData>
                 </delivery>
-                <delivery>
+                <delivery id="456">
                     <type>home-delivery</type>
                     <deliveryData>
                         <homeDelivery>
@@ -261,7 +261,7 @@
                         </homeDelivery>
                     </deliveryData>
                 </delivery>
-                <delivery>
+                <delivery id="789">
                     <type>click-and-collect</type>
                     <deliveryData>
                         <clickNCollectDelivery>

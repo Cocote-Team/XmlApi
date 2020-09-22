@@ -213,6 +213,10 @@
                 <stock>456</stock>
                 <stockThreshold>10</stockThreshold>
                 <weight>12.34</weight>
+                <deliveryChoices>
+                    <deliveryChoice ref="123"/>
+                    <deliveryChoice ref="789"/>
+                </deliveryChoices>
             </marketplaceDetails>
         </offer>
     </items>

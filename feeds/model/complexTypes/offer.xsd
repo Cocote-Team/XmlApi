@@ -346,6 +346,23 @@
                                 </xs:documentation>
                             </xs:annotation>
                         </xs:element>
+                        <xs:element name="deliveryChoices">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="deliveryChoice" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                            <xs:attribute name="ref" type="xs:string">
+                                                <xs:annotation>
+                                                    <xs:documentation xml:lang="en">
+                                                        Reference to the delivery method described in shops feed.
+                                                    </xs:documentation>
+                                                </xs:annotation>
+                                            </xs:attribute>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
